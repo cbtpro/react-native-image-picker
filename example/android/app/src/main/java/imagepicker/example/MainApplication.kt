@@ -1,6 +1,9 @@
 package imagepicker.example
 
 import android.app.Application
+import android.util.Log
+import androidx.camera.camera2.Camera2Config
+import androidx.camera.core.CameraXConfig
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -11,6 +14,7 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
+
 
 class MainApplication : Application(), ReactApplication {
 
@@ -32,7 +36,10 @@ class MainApplication : Application(), ReactApplication {
 
   override val reactHost: ReactHost
     get() = getDefaultReactHost(applicationContext, reactNativeHost)
-
+  fun getCameraXConfig(): CameraXConfig {
+    return CameraXConfig.Builder.fromConfig(Camera2Config.defaultConfig())
+      .setMinimumLoggingLevel(Log.ERROR).build()
+  }
   override fun onCreate() {
     super.onCreate()
     SoLoader.init(this, OpenSourceMergedSoMapping)
