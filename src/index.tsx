@@ -160,7 +160,7 @@ export const openVideoPicker = (
   return ImagePicker.openVideoPicker(optionObj, callback);
 };
 export default {
-  ...ImagePicker,
+  // ...ImagePicker,
   showImagePicker,
   asyncShowImagePicker,
   openCamera,
