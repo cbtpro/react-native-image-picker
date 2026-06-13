@@ -37,3 +37,4 @@ error Failed to build ios project. "xcodebuild" exited with error code '65'. To 
 为“ImagePickerExample”签名需要一个开发团队。在Signing & Capabilities编辑器中选择一个开发团队。（在目标‘ImagePickerExample’从项目‘ImagePickerExample’）
 构建ios项目失败。“xcodebuild”退出，错误码为“65”。要进一步调试构建日志，请考虑使用Xcode构建应用程序。打开“ImagePickerExample.xcworkspace”。
 ```
+
